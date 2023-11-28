@@ -1,6 +1,6 @@
 import React from "react";
 //function to render student responses
-export const ScoreBoard = () => {
+export const ScoreBoard = ({ handlePageChange }) => {
   return (
     <section>
       <div className="flex justify-center m-8">
@@ -61,7 +61,10 @@ export const ScoreBoard = () => {
             </table>
           </div>
           <div className="flex justify-center">
-            <button className="rounded-full p-2 mb-4 border border-white">
+            <button
+              className="rounded-full p-2 mb-4 border border-white"
+              onClick={() => handlePageChange("gameBoard")}
+            >
               Réessayer?
             </button>
           </div>

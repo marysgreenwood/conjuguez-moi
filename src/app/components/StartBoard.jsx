@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 
-export const StartBoard = () => {
+export const StartBoard = ({handlePageChange}) => {
   return (
     <section>
       <div className="flex justify-center m-8">
@@ -12,7 +13,10 @@ export const StartBoard = () => {
             <p className="p-4 ">Pratiquons le verbe être!</p>
           </div>
           <div className="flex justify-center">
-            <button className="rounded-full p-2 mb-4 border border-white">
+            <button
+              className="rounded-full p-2 mb-4 border border-white"
+              onClick={() => handlePageChange("gameBoard")}
+            >
               Commencer!
             </button>
           </div>
