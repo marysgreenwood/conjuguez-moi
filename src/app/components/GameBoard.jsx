@@ -61,39 +61,41 @@ const GameBoard = ({
   return (
     <section>
       <div className="flex justify-center m-8">
-        <div className="border border-white rounded-xl">
-          <div className="flex justify-end">
-            <h3 className="px-4 pt-4">Score: {score}</h3>
-          </div>
-          <div>
-            <h3 className="px-4 pt-4">{arr[activeQuestion].subject}</h3>
-          </div>
-          <form action="">
-            <div className="flex justify-center">
-              <input
-                type="text"
-                id="reponse"
-                name="reponse"
-                placeholder="réponse"
-                className="m-4 p-2 rounded-xl text-black"
-              />
+        <div className="bg-[#1c8f90]">
+          <div className="bg-[#FFFFFF] m-1 border-4 border-[#008485]  md:min-h-[300px] md:min-w-[500px] flex-col justify-center">
+            <div className="flex justify-end">
+              <h3 className="px-4 pt-4 text-black">Score: {score}</h3>
             </div>
-            <div className="flex justify-center">
-              {/* onClick saves user response to local memory, records if answer matches or does not match correct conjugation */}
-              <button
-                className="rounded-full p-3 mb-4 border border-white"
-                onClick={(event) =>
-                  onAnswerSubmit(
-                    event,
-                    arr[activeQuestion].subject,
-                    reponse.value
-                  )
-                }
-              >
-                Valider
-              </button>
+            <div>
+              <h3 className="mt-2 p-4 text-black font-extrabold text-2xl">{arr[activeQuestion].subject}</h3>
             </div>
-          </form>
+            <form action="">
+              <div className="flex justify-center">
+                <input
+                  type="text"
+                  id="reponse"
+                  name="reponse"
+                  placeholder="réponse"
+                  className="m-4 p-2 border-2 border-[#1C8F90] rounded-xl text-black"
+                />
+              </div>
+              <div className="flex justify-center">
+                {/* onClick saves user response to local memory, records if answer matches or does not match correct conjugation */}
+                <button
+                  className="rounded-full p-3 mt-2 my-6 hover:border-2  hover:border-[#008485] bg-[#FCC201] text-black font-bold"
+                  onClick={(event) =>
+                    onAnswerSubmit(
+                      event,
+                      arr[activeQuestion].subject,
+                      reponse.value
+                    )
+                  }
+                >
+                  Valider
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

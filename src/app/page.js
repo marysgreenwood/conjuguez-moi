@@ -3,7 +3,7 @@ import PageContainer from "./pages/pageContainer.jsx";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-[#FFFFFF]">
       <Heading />
       <PageContainer />
     </main>
