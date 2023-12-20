@@ -38,7 +38,9 @@ export default function PageContainer() {
           handlePageChange={handlePageChange}
           currentPage={currentPage}
           score={score}
+          setScore={setScore}
           userAnswers={userAnswers}
+          setUserAnswers={setUserAnswers}
         />
       );
     }

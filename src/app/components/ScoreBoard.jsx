@@ -1,26 +1,19 @@
 import React, { useEffect } from "react";
 //import etre from "./verbs.js";
 
-export const ScoreBoard = ({ handlePageChange, score, userAnswers }) => {
-  //sort userAnswers array
-  // var results = [];
-  // const sortResults = (arr1, arr2) => {
-  //   for (let i = 0; i < arr1.length; i++) {
-  //     var pron = arr1[i].pronoun;
-  //     var answ = arr1[i].answer;
-  //     for (let j = 0; j < arr2.length; j++) {
-  //       var subj = arr2[j].subject;
-  //       if (pron === subj) {
-  //         results = [...results, answ];
-  //       }
-  //       debugger;
-  //     }
-  //   }
-  // };
-  // useEffect(() => {
-  //   // sortResults(userAnswers, etre);
-  //   console.log("etre", etre, "userAnswers", userAnswers);
-  // }, []);
+export const ScoreBoard = ({
+  handlePageChange,
+  score,
+  setScore,
+  userAnswers,
+  setUserAnswers,
+}) => {
+  const retry = () => {
+    setScore(0);
+    setUserAnswers([]);
+    handlePageChange("gameBoard");
+  };
+
   return (
     <section>
       <div className="flex justify-center m-8 text-black">
@@ -30,56 +23,73 @@ export const ScoreBoard = ({ handlePageChange, score, userAnswers }) => {
               <h3 className="p-4 font-bold">Score: {score}/9</h3>
             </div>
             <div className="flex justify-center">
-              <h3 className="py-4 font-extrabold text-2xl">Réponses</h3>
+              <h3 className="pt-4 font-extrabold text-2xl">Réponses</h3>
             </div>
             <div className="p-6">
               <table>
                 <tbody>
-          
                   <tr>
-                    <td className="p-4">je</td>
-                    <td className="p-4">suis</td>
-                    <td className="p-4">{userAnswers[4].answer}</td>
+                    <td className="px-6 md:px-12 pb-2">je</td>
+                    <td className="px-6 md:px-12 pb-2">suis</td>
+                    <td className="px-6 md:px-12 pb-2">
+                      {userAnswers[4].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">tu</td>
-                    <td className="p-4">es</td>
-                    <td className="p-4">{userAnswers[7].answer}</td>
+                    <td className="px-6 md:px-12 py-2">tu</td>
+                    <td className="px-6 md:px-12 py-2">es</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[7].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">il</td>
-                    <td className="p-4">est</td>
-                    <td className="p-4">{userAnswers[2].answer}</td>
+                    <td className="px-6 md:px-12 py-2">il</td>
+                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[2].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">elle</td>
-                    <td className="p-4">est</td>
-                    <td className="p-4">{userAnswers[0].answer}</td>
+                    <td className="px-6 md:px-12 py-2">elle</td>
+                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[0].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">on</td>
-                    <td className="p-4">est</td>
-                    <td className="p-4">{userAnswers[6].answer}</td>
+                    <td className="px-6 md:px-12 py-2">on</td>
+                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[6].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">nous</td>
-                    <td className="p-4">sommes</td>
-                    <td className="p-4">{userAnswers[5].answer}</td>
+                    <td className="px-6 md:px-12 py-2">nous</td>
+                    <td className="px-6 md:px-12 py-2">sommes</td>
+                    <td className="ppx-6 md:px-12 py-2">
+                      {userAnswers[5].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">vous</td>
-                    <td className="p-4">êtes</td>
-                    <td className="p-4">{userAnswers[8].answer}</td>
+                    <td className="px-6 md:px-12 py-2">vous</td>
+                    <td className="px-6 md:px-12 py-2">êtes</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[8].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">ils</td>
-                    <td className="p-4">sont</td>
-                    <td className="p-4">{userAnswers[3].answer}</td>
+                    <td className="px-6 md:px-12 py-2">ils</td>
+                    <td className="px-6 md:px-12 py-2">sont</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[3].answer}
+                    </td>
                   </tr>
                   <tr>
-                    <td className="p-4">elles</td>
-                    <td className="p-4">sont</td>
-                    <td className="p-4">{userAnswers[1].answer}</td>
+                    <td className="px-6 md:px-12 py-2">elles</td>
+                    <td className="px-6 md:px-12 py-2">sont</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {userAnswers[1].answer}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -87,7 +97,7 @@ export const ScoreBoard = ({ handlePageChange, score, userAnswers }) => {
             <div className="flex justify-center">
               <button
                 className="rounded-full p-3 mt-2 my-6 hover:border-2  hover:border-[#008485] bg-[#FCC201] text-black font-bold"
-                onClick={() => handlePageChange("gameBoard")}
+                onClick={() => retry()}
               >
                 Réessayer?
               </button>
