@@ -1,5 +1,5 @@
 import Heading from "./components/Heading.jsx";
-import PageContainer from "./pages/pageContainer.jsx";
+import PageContainer from "./pages/PageContainer.jsx";
 
 export default function Home() {
   return (
