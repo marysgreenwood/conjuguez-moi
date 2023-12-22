@@ -33,15 +33,15 @@ const GameBoard = ({
   const { subject, verb } = arr[activeQuestion];
 
   //   Select and check answer
-  function onAnswerSubmit(e, question, res) {
+  function onAnswerSubmit(e, question, response) {
     e.preventDefault();
-    var response = res.toLowerCase().trim();
+    response = response.toLowerCase().trim();
     //object stores user answer
     var currentAnswer = { pronoun: question, answer: response };
     //pushes answer to array of user answers
     updateAnswers(currentAnswer);
     //check answer & adjust score
-    if (res == arr[activeQuestion].verb) {
+    if (response == arr[activeQuestion].verb) {
       setScore(score + 1);
     }
     //move to next pronoun or move to scoreboard
