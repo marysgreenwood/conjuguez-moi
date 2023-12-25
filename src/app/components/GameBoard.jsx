@@ -14,12 +14,12 @@ const GameBoard = ({
   //state variables
   const [activeQuestion, setActiveQuestion] = useState(0);
 
-  const [userAnswerIndex, setUserAnswerIndex] = useState(null);
   const updateAnswers = (userAnswer) =>
     setUserAnswers([...userAnswers, userAnswer]);
 
   //shuffle verb array
-  var arr = etre.sort((a, b) => {
+  var arr = [...etre];
+  arr.sort((a, b) => {
     if (a.subject < b.subject) {
       return -1;
     }
@@ -53,10 +53,22 @@ const GameBoard = ({
     }
   }
 
-  useEffect(() => {
-    // sortResults(userAnswers, etre);
-    console.log("etre", etre, "array", arr);
-  }, []);
+  //adds selected accent to answer input
+  // function addAccent (e)  {
+  //   console.log(e.target.innerText);
+  //   debugger;
+  // };
+  function addAccent(e, currentAnsw) {
+    e.preventDefault();
+    currentAnsw = currentAnsw.concat(e.target.innerText);
+    console.log(currentAnsw);
+    reponse.value = currentAnsw;
+  }
+
+  // useEffect(() => {
+  //   // sortResults(userAnswers, etre);
+  //   console.log("etre", etre, "array", arr);
+  // }, []);
 
   return (
     <section>
@@ -71,7 +83,96 @@ const GameBoard = ({
                 {arr[activeQuestion].subject}
               </h3>
             </div>
+
             <form action="">
+              <div className="mx-2 mb-2 flex justify-evenly">
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  à
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  â
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ç
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  é
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  è
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ë
+                </button>
+              </div>
+              <div className="mx-2 flex justify-evenly mb-1">
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ê
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  î
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ï
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ô
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ù
+                </button>
+                <button
+                  className="text-black border border-[#008485] px-2 rounded-md mx-2"
+                  type="button"
+                  onClick={(event) => addAccent(event, reponse.value)}
+                >
+                  ü
+                </button>
+              </div>
               <input
                 type="text"
                 id="reponse"

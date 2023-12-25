@@ -97,6 +97,7 @@ export const ScoreBoard = ({
             <div className="flex justify-center">
               <button
                 className="rounded-full p-3 mt-2 my-6 hover:border-2  hover:border-[#008485] bg-[#FCC201] text-black font-bold"
+                type="submit"
                 onClick={() => retry()}
               >
                 Réessayer?
