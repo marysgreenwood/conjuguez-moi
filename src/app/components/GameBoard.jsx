@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import etre from "./verbs.js";
+import { etre, arr } from "./verbs.js";
 
 //FIGURE OUT HOW TO SHARE SCORE VARIABLE IN GAMEBOARD AND SCOREBOARD COMPONENTS
 
@@ -17,17 +17,7 @@ const GameBoard = ({
   const updateAnswers = (userAnswer) =>
     setUserAnswers([...userAnswers, userAnswer]);
 
-  //shuffle verb array
-  var arr = [...etre];
-  arr.sort((a, b) => {
-    if (a.subject < b.subject) {
-      return -1;
-    }
-    if (a.subject > b.subject) {
-      return 1;
-    }
-    return 0;
-  });
+  // console.log("original array", etre, "shuffled arr", arr);
 
   //sets pronoun and conjugation values for current question
   const { subject, verb } = arr[activeQuestion];
@@ -178,6 +168,7 @@ const GameBoard = ({
                 id="reponse"
                 name="reponse"
                 placeholder="réponse"
+                autoFocus
                 className="mt-2 p-4 mx-7 md:ml-28 border-2 border-[#1C8F90] rounded-xl text-black"
               />
 

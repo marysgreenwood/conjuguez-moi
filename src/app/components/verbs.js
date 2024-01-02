@@ -11,4 +11,8 @@ var etre = [
   { subject: "elles", verb: "sont" },
 ];
 
-export default etre;
+//shuffle verb array
+var arr = [...etre];
+arr.sort((a, b) => 0.5 - Math.random());
+
+export { etre, arr };

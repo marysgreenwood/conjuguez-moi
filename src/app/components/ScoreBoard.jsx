@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-//import etre from "./verbs.js";
+import { etre, arr } from "./verbs.js";
 
 export const ScoreBoard = ({
   handlePageChange,
@@ -13,6 +13,22 @@ export const ScoreBoard = ({
     setUserAnswers([]);
     handlePageChange("gameBoard");
   };
+
+  var answArr = [];
+  const populateAnswers = (orig, answ) => {
+    for (let i = 0; i < orig.length; i++) {
+      var answKey = orig[i];
+      for (let j = 0; j < answ.length; j++) {
+        var currAnsw = answ[j];
+        if (answKey.subject === currAnsw.pronoun) {
+          answArr.push(currAnsw);
+          console.log(answArr);
+        }
+      }
+    }
+  };
+
+  populateAnswers(etre, userAnswers);
 
   return (
     <section>
@@ -31,65 +47,47 @@ export const ScoreBoard = ({
                   <tr>
                     <td className="px-6 md:px-12 pb-2">je</td>
                     <td className="px-6 md:px-12 pb-2">suis</td>
-                    <td className="px-6 md:px-12 pb-2">
-                      {userAnswers[4].answer}
-                    </td>
+                    <td className="px-6 md:px-12 pb-2">{answArr[0].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">tu</td>
                     <td className="px-6 md:px-12 py-2">es</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[7].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[1].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">il</td>
                     <td className="px-6 md:px-12 py-2">est</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[2].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[2].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">elle</td>
                     <td className="px-6 md:px-12 py-2">est</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[0].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[3].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">on</td>
                     <td className="px-6 md:px-12 py-2">est</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[6].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[4].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">nous</td>
                     <td className="px-6 md:px-12 py-2">sommes</td>
-                    <td className="ppx-6 md:px-12 py-2">
-                      {userAnswers[5].answer}
-                    </td>
+                    <td className="ppx-6 md:px-12 py-2">{answArr[5].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">vous</td>
                     <td className="px-6 md:px-12 py-2">êtes</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[8].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[6].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">ils</td>
                     <td className="px-6 md:px-12 py-2">sont</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[3].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[7].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">elles</td>
                     <td className="px-6 md:px-12 py-2">sont</td>
-                    <td className="px-6 md:px-12 py-2">
-                      {userAnswers[1].answer}
-                    </td>
+                    <td className="px-6 md:px-12 py-2">{answArr[8].answer}</td>
                   </tr>
                 </tbody>
               </table>
