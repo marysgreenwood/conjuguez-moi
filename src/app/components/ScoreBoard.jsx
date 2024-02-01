@@ -16,7 +16,6 @@ export const ScoreBoard = ({
   };
 
   var correctConj = verbs[currVerb];
-  console.log(verbs);
 
   var answArr = [];
 
@@ -27,7 +26,6 @@ export const ScoreBoard = ({
         var currAnsw = answ[j];
         if (answKey.subject === currAnsw.pronoun) {
           answArr.push(currAnsw);
-          console.log(answArr);
         }
       }
     }
@@ -89,7 +87,7 @@ export const ScoreBoard = ({
                     <td className="px-6 md:px-12 py-2">
                       {correctConj[5].verb}
                     </td>
-                    <td className="ppx-6 md:px-12 py-2">{answArr[5].answer}</td>
+                    <td className="px-6 md:px-12 py-2">{answArr[5].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">vous</td>

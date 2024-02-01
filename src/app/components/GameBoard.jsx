@@ -49,7 +49,6 @@ const GameBoard = ({
   function addAccent(e, currentAnsw) {
     e.preventDefault();
     currentAnsw = currentAnsw.concat(e.target.innerText);
-    console.log(currentAnsw);
     reponse.value = currentAnsw;
   }
 
