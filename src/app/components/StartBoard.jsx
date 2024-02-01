@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
 
-export const StartBoard = ({ handlePageChange }) => {
+export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
+  function chooseVerb(userChoice) {
+    setCurrVerb(userChoice);
+    console.log(currVerb);
+  }
+
   return (
     <section>
       <div className="flex justify-center">
@@ -14,9 +19,21 @@ export const StartBoard = ({ handlePageChange }) => {
                 </h3>
               </div>
               <div className="flex justify-center">
-                <p className="p-4 text-black text-xl">
-                  Pratiquons le verbe être!
-                </p>
+                <p className="p-4 text-black text-xl">Choisissez un verb:</p>
+              </div>
+              <div className="flex justify-evenly">
+                <button
+                  className="rounded-2xl p-3 mt-5 my-6 border-2  border-[#008485] text-black font-bold w-16 text-center focus:bg-[#00d0d2]"
+                  onClick={() => chooseVerb("etre")}
+                >
+                  être
+                </button>
+                <button
+                  className="rounded-2xl py-3 mt-5 my-6 border-2  border-[#008485] text-black font-bold w-16 text-center focus:bg-[#00d0d2]"
+                  onClick={() => chooseVerb("parler")}
+                >
+                  parler
+                </button>
               </div>
               <div className="flex justify-center">
                 <button

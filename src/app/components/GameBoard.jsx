@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { etre, arr } from "./verbs.js";
+import { verbs, shuffled } from "./verbs.js";
 
 //FIGURE OUT HOW TO SHARE SCORE VARIABLE IN GAMEBOARD AND SCOREBOARD COMPONENTS
 
@@ -9,15 +9,17 @@ const GameBoard = ({
   score,
   setScore,
   userAnswers,
+  currVerb,
   setUserAnswers,
 }) => {
-  //state variables
+  
+
+  var arr = shuffled[currVerb];
+
   const [activeQuestion, setActiveQuestion] = useState(0);
 
   const updateAnswers = (userAnswer) =>
     setUserAnswers([...userAnswers, userAnswer]);
-
-  // console.log("original array", etre, "shuffled arr", arr);
 
   //sets pronoun and conjugation values for current question
   const { subject, verb } = arr[activeQuestion];
@@ -44,21 +46,12 @@ const GameBoard = ({
   }
 
   //adds selected accent to answer input
-  // function addAccent (e)  {
-  //   console.log(e.target.innerText);
-  //   debugger;
-  // };
   function addAccent(e, currentAnsw) {
     e.preventDefault();
     currentAnsw = currentAnsw.concat(e.target.innerText);
     console.log(currentAnsw);
     reponse.value = currentAnsw;
   }
-
-  // useEffect(() => {
-  //   // sortResults(userAnswers, etre);
-  //   console.log("etre", etre, "array", arr);
-  // }, []);
 
   return (
     <section>

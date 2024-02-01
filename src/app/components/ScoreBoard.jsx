@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { etre, arr } from "./verbs.js";
+import { verbs, shuffled } from "./verbs.js";
 
 export const ScoreBoard = ({
   handlePageChange,
@@ -7,6 +7,7 @@ export const ScoreBoard = ({
   setScore,
   userAnswers,
   setUserAnswers,
+  currVerb,
 }) => {
   const retry = () => {
     setScore(0);
@@ -14,7 +15,11 @@ export const ScoreBoard = ({
     handlePageChange("gameBoard");
   };
 
+  var correctConj = verbs[currVerb];
+  console.log(verbs);
+
   var answArr = [];
+
   const populateAnswers = (orig, answ) => {
     for (let i = 0; i < orig.length; i++) {
       var answKey = orig[i];
@@ -28,7 +33,7 @@ export const ScoreBoard = ({
     }
   };
 
-  populateAnswers(etre, userAnswers);
+  populateAnswers(verbs[currVerb], userAnswers);
 
   return (
     <section>
@@ -46,47 +51,65 @@ export const ScoreBoard = ({
                 <tbody>
                   <tr>
                     <td className="px-6 md:px-12 pb-2">je</td>
-                    <td className="px-6 md:px-12 pb-2">suis</td>
+                    <td className="px-6 md:px-12 pb-2">
+                      {correctConj[0].verb}
+                    </td>
                     <td className="px-6 md:px-12 pb-2">{answArr[0].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">tu</td>
-                    <td className="px-6 md:px-12 py-2">es</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[1].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[1].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">il</td>
-                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[2].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[2].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">elle</td>
-                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[3].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[3].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">on</td>
-                    <td className="px-6 md:px-12 py-2">est</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[4].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[4].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">nous</td>
-                    <td className="px-6 md:px-12 py-2">sommes</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[5].verb}
+                    </td>
                     <td className="ppx-6 md:px-12 py-2">{answArr[5].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">vous</td>
-                    <td className="px-6 md:px-12 py-2">êtes</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[6].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[6].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">ils</td>
-                    <td className="px-6 md:px-12 py-2">sont</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[7].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[7].answer}</td>
                   </tr>
                   <tr>
                     <td className="px-6 md:px-12 py-2">elles</td>
-                    <td className="px-6 md:px-12 py-2">sont</td>
+                    <td className="px-6 md:px-12 py-2">
+                      {correctConj[8].verb}
+                    </td>
                     <td className="px-6 md:px-12 py-2">{answArr[8].answer}</td>
                   </tr>
                 </tbody>

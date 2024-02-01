@@ -9,6 +9,7 @@ export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState("startBoard");
   const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [currVerb, setCurrVerb] = useState("");
 
   const renderPage = () => {
     if (currentPage === "startBoard") {
@@ -16,6 +17,8 @@ export default function PageContainer() {
         <StartBoard
           handlePageChange={handlePageChange}
           currentPage={currentPage}
+          currVerb={currVerb}
+          setCurrVerb={setCurrVerb}
         />
       );
     }
@@ -24,6 +27,7 @@ export default function PageContainer() {
         <GameBoard
           handlePageChange={handlePageChange}
           currentPage={currentPage}
+          currVerb={currVerb}
           score={score}
           setScore={setScore}
           userAnswers={userAnswers}
@@ -37,6 +41,7 @@ export default function PageContainer() {
         <ScoreBoard
           handlePageChange={handlePageChange}
           currentPage={currentPage}
+          currVerb={currVerb}
           score={score}
           setScore={setScore}
           userAnswers={userAnswers}
