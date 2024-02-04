@@ -36,7 +36,7 @@ export const ScoreBoard = ({
   return (
     <section>
       <div className="flex justify-center m-8 text-black">
-        <div className="bg-[#008485] ">
+        <div className="bg-[#008485] mb-20">
           <div className="bg-[#ffffff] m-1 border-4 border-[#1c8f90] md:min-h-[300px] md:min-w-[500px] flex-col justify-center">
             <div className="flex justify-end">
               <h3 className="p-4 font-bold">Score: {score}/9</h3>
@@ -47,6 +47,15 @@ export const ScoreBoard = ({
             <div className="p-6">
               <table>
                 <tbody>
+                  <tr>
+                    <td className="px-6 md:px-12 pb-2"></td>
+                    <td className="px-6 md:px-12 pb-2 font-bold">
+                      Réponses correctes
+                    </td>
+                    <td className="px-6 md:px-12 pb-2 font-bold">
+                      Vos réponses
+                    </td>
+                  </tr>
                   <tr>
                     <td className="px-6 md:px-12 pb-2">je</td>
                     <td className="px-6 md:px-12 pb-2">

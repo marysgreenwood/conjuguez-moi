@@ -23,16 +23,28 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
               </div>
               <div className="flex justify-evenly">
                 <button
-                  className="rounded-2xl p-3 mt-5 my-6 border-2  border-[#008485] text-black font-bold w-16 text-center focus:bg-[#00d0d2]"
+                  className="rounded-2xl p-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
                   onClick={() => chooseVerb("etre")}
                 >
                   être
                 </button>
                 <button
-                  className="rounded-2xl py-3 mt-5 my-6 border-2  border-[#008485] text-black font-bold w-16 text-center focus:bg-[#00d0d2]"
+                  className="rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
                   onClick={() => chooseVerb("parler")}
                 >
                   parler
+                </button>
+                <button
+                  className="rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
+                  onClick={() => chooseVerb("manger")}
+                >
+                  manger
+                </button>
+                <button
+                  className=" rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
+                  onClick={() => chooseVerb("avancer")}
+                >
+                  avancer
                 </button>
               </div>
               <div className="flex justify-center">

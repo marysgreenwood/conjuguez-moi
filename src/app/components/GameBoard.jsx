@@ -12,8 +12,6 @@ const GameBoard = ({
   currVerb,
   setUserAnswers,
 }) => {
-  
-
   var arr = shuffled[currVerb];
 
   const [activeQuestion, setActiveQuestion] = useState(0);

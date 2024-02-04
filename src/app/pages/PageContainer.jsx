@@ -53,5 +53,5 @@ export default function PageContainer() {
 
   const handlePageChange = (page) => setCurrentPage(page);
 
-  return <div>{renderPage()}</div>;
+  return <div className="mb-14">{renderPage()}</div>;
 }

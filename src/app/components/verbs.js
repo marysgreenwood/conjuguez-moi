@@ -23,6 +23,28 @@ var verbs = {
     { subject: "ils", verb: "parlent" },
     { subject: "elles", verb: "parlent" },
   ],
+  manger: [
+    { subject: "je", verb: "mange" },
+    { subject: "tu", verb: "manges" },
+    { subject: "il", verb: "mange" },
+    { subject: "elle", verb: "mange" },
+    { subject: "on", verb: "mange" },
+    { subject: "nous", verb: "mangeons" },
+    { subject: "vous", verb: "mangez" },
+    { subject: "ils", verb: "mangent" },
+    { subject: "elles", verb: "mangent" },
+  ],
+  avancer: [
+    { subject: "j'", verb: "avance" },
+    { subject: "tu", verb: "avances" },
+    { subject: "il", verb: "avance" },
+    { subject: "elle", verb: "avance" },
+    { subject: "on", verb: "avance" },
+    { subject: "nous", verb: "avançons" },
+    { subject: "vous", verb: "avancez" },
+    { subject: "ils", verb: "avancent" },
+    { subject: "elles", verb: "avancent" },
+  ],
 };
 
 const shuffleArray = (ar) => {
