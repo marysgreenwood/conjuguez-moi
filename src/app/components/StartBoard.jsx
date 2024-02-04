@@ -34,6 +34,8 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
                 >
                   parler
                 </button>
+              </div>
+              <div className="flex justify-evenly">
                 <button
                   className="rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
                   onClick={() => chooseVerb("manger")}
