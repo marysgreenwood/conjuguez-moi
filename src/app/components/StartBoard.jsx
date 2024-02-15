@@ -24,7 +24,7 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
               <div className="flex justify-evenly">
                 <button
                   className="rounded-2xl p-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("etre")}
+                  onClick={() => chooseVerb("être")}
                 >
                   être
                 </button>
@@ -47,6 +47,12 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
                   onClick={() => chooseVerb("avancer")}
                 >
                   avancer
+                </button>
+                <button
+                  className=" rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
+                  onClick={() => chooseVerb("avoir")}
+                >
+                  avoir
                 </button>
               </div>
               <div className="flex justify-center">

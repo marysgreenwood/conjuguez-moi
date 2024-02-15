@@ -1,7 +1,7 @@
 //verb array stores correct conjugation
 //for NEXT TIME--how to access
 var verbs = {
-  etre: [
+  être: [
     { subject: "je", verb: "suis" },
     { subject: "tu", verb: "es" },
     { subject: "il", verb: "est" },
@@ -44,6 +44,17 @@ var verbs = {
     { subject: "vous", verb: "avancez" },
     { subject: "ils", verb: "avancent" },
     { subject: "elles", verb: "avancent" },
+  ],
+  avoir: [
+    { subject: "j'", verb: "ai" },
+    { subject: "tu", verb: "as" },
+    { subject: "il", verb: "a" },
+    { subject: "elle", verb: "a" },
+    { subject: "on", verb: "a" },
+    { subject: "nous", verb: "avons" },
+    { subject: "vous", verb: "avez" },
+    { subject: "ils", verb: "ont" },
+    { subject: "elles", verb: "ont" },
   ],
 };
 

@@ -58,6 +58,9 @@ const GameBoard = ({
             <div className="flex justify-end">
               <h3 className="px-4 pt-4 text-black">Score: {score}</h3>
             </div>
+            <div className="flex justify-center">
+              <h3 className="text-black text-2xl font-bold">{currVerb}</h3>
+            </div>
             <div>
               <h3 className="mt-2 p-4 mx-4 md:ml-24 text-black font-extrabold text-2xl">
                 {arr[activeQuestion].subject}
