@@ -1,11 +1,19 @@
 "use client";
 import React from "react";
+import { VerbOptionButtons } from "./VerbOptionButtons";
 
 export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
   function chooseVerb(userChoice) {
     setCurrVerb(userChoice);
     console.log(currVerb);
   }
+  const verbOptions = [
+    { verbChoice: "parler" },
+    { verbChoice: "avancer" },
+    { verbChoice: "manger" },
+    { verbChoice: "être" },
+    { verbChoice: "avoir" },
+  ];
 
   return (
     <section>
@@ -21,39 +29,10 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
               <div className="flex justify-center">
                 <p className="p-4 text-black text-xl">Choisissez un verb:</p>
               </div>
-              <div className="flex justify-evenly">
-                <button
-                  className="rounded-2xl p-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("être")}
-                >
-                  être
-                </button>
-                <button
-                  className="rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("parler")}
-                >
-                  parler
-                </button>
-              </div>
-              <div className="flex justify-evenly">
-                <button
-                  className="rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("manger")}
-                >
-                  manger
-                </button>
-                <button
-                  className=" rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("avancer")}
-                >
-                  avancer
-                </button>
-                <button
-                  className=" rounded-2xl py-3 mt-5 my-6 border-2 hover:border-[#00d0d2] border-[#008485] text-black font-bold w-20 text-center focus:bg-[#00d0d2]"
-                  onClick={() => chooseVerb("avoir")}
-                >
-                  avoir
-                </button>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 ml-2 md:ml-8 my-6">
+                {verbOptions.map((verbo) => (
+                  <VerbOptionButtons chooseVerb={chooseVerb} verbOption={verbo.verbChoice} />
+                ))}
               </div>
               <div className="flex justify-center">
                 <button
