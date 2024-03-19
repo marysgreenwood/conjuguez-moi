@@ -13,6 +13,7 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
     { verbChoice: "manger" },
     { verbChoice: "être" },
     { verbChoice: "avoir" },
+    { verbChoice: "finir" },
   ];
 
   return (
@@ -22,16 +23,19 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
           <div className="m-1 border-4 border-[#1c8f90] bg-[#ffffff] md:min-h-[300px] md:min-w-[500px] flex-col justify-center">
             <div className="flex-col justify-evenly">
               <div className="flex justify-center">
-                <h3 className="md:mt-10 mt-2 py-4 text-black font-extrabold font-serif text-2xl">
+                <h3 className="md:mt-10 mt-2 py-4 text-black font-extrabold font-serif text-xl md:2xl">
                   Bienvenue!
                 </h3>
               </div>
               <div className="flex justify-center">
                 <p className="p-4 text-black text-xl">Choisissez un verb:</p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 ml-2 md:ml-8 my-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 ml-2 md:ml-8 my-6">
                 {verbOptions.map((verbo) => (
-                  <VerbOptionButtons chooseVerb={chooseVerb} verbOption={verbo.verbChoice} />
+                  <VerbOptionButtons
+                    chooseVerb={chooseVerb}
+                    verbOption={verbo.verbChoice}
+                  />
                 ))}
               </div>
               <div className="flex justify-center">

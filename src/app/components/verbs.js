@@ -56,6 +56,17 @@ var verbs = {
     { subject: "ils", verb: "ont" },
     { subject: "elles", verb: "ont" },
   ],
+  finir: [
+    { subject: "je", verb: "finis" },
+    { subject: "tu", verb: "finis" },
+    { subject: "il", verb: "finit" },
+    { subject: "elle", verb: "finit" },
+    { subject: "on", verb: "finit" },
+    { subject: "nous", verb: "finissons" },
+    { subject: "vous", verb: "finissez" },
+    { subject: "ils", verb: "finissent" },
+    { subject: "elles", verb: "finissent" },
+  ],
 };
 
 const shuffleArray = (ar) => {
