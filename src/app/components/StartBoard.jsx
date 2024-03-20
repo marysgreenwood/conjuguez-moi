@@ -30,13 +30,11 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
               <div className="flex justify-center">
                 <p className="p-4 text-black text-xl">Choisissez un verb:</p>
               </div>
-              <div
-                key={verbOptions.verbChoice}
-                className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 ml-2 md:ml-8 my-6"
-              >
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 ml-2 md:ml-8 my-6">
                 {verbOptions.map((verbo) => (
                   <VerbOptionButtons
                     chooseVerb={chooseVerb}
+                    key={verbo.verbChoice}
                     verbOption={verbo.verbChoice}
                   />
                 ))}
