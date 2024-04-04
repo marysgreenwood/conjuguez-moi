@@ -14,6 +14,12 @@ export const StartBoard = ({ handlePageChange, currVerb, setCurrVerb }) => {
     { verbChoice: "être" },
     { verbChoice: "avoir" },
     { verbChoice: "finir" },
+    { verbChoice: "aller" },
+    { verbChoice: "faire" },
+    { verbChoice: "rendre" },
+    { verbChoice: "prendre" },
+    { verbChoice: "boire" },
+    { verbChoice: "préférer" },
   ];
 
   return (
